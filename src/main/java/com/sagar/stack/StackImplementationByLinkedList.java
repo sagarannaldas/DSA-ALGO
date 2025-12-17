@@ -18,11 +18,6 @@ public class StackImplementationByLinkedList {
         }
     }
 
-    // push
-    // pop
-    // peek
-    // isEmpty
-
     public void push(int value) {
         var node = new Node(value);
         if (isEmpty()) {
@@ -47,6 +42,7 @@ public class StackImplementationByLinkedList {
         if (first == last) {
             first = last = null;
             count--;
+            return;
         }
 
         var currentNode = first;
@@ -57,6 +53,7 @@ public class StackImplementationByLinkedList {
             }
             currentNode = currentNode.next;
         }
+
         previousNode.next = null;
         last = previousNode;
         count--;
