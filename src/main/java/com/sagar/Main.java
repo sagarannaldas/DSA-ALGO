@@ -1,11 +1,8 @@
 package com.sagar;
 
-import com.sagar.linkedlist.LinkedList;
-import com.sagar.stack.Stack;
-import com.sagar.stack.StackImplementationByArray;
-import com.sagar.stack.StackImplementationByLinkedList;
-
-import java.util.Arrays;
+import com.sagar.queue.ArrayQueue;
+import com.sagar.queue.PriorityQueue;
+import com.sagar.queue.QueueImplementationBy2Stacks;
 
 class Main {
     public static void main(String[] args) {
@@ -46,7 +43,7 @@ class Main {
 
         // Stack
 
-        Stack stack = new Stack();
+        /*Stack stack = new Stack();
 
         var reverseString = stack.ReverseAString("macbook");
         System.out.println(reverseString);
@@ -82,6 +79,45 @@ class Main {
         stackImplementationByLinkedList.pop();
         System.out.println(stackImplementationByLinkedList);
         System.out.println(stackImplementationByLinkedList.peek());
-        System.out.println(stackImplementationByLinkedList.isEmpty());
+        System.out.println(stackImplementationByLinkedList.isEmpty());*/
+
+        // Queue
+
+/*        ArrayQueue arrayQueue = new ArrayQueue(5);
+        arrayQueue.enqueue(10);
+        arrayQueue.enqueue(20);
+        arrayQueue.enqueue(30);
+        arrayQueue.enqueue(40);
+        arrayQueue.enqueue(50);
+        System.out.println(arrayQueue);
+        var front = arrayQueue.dequeue();
+        System.out.println(front);
+        front = arrayQueue.dequeue();
+        System.out.println(front);
+        arrayQueue.enqueue(60);
+        System.out.println(arrayQueue);
+
+        QueueImplementationBy2Stacks queueImplementationBy2Stacks = new QueueImplementationBy2Stacks();
+        queueImplementationBy2Stacks.enqueue(10);
+        queueImplementationBy2Stacks.enqueue(20);
+        queueImplementationBy2Stacks.enqueue(30);
+        queueImplementationBy2Stacks.enqueue(40);
+        queueImplementationBy2Stacks.enqueue(50);
+        queueImplementationBy2Stacks.dequeue();
+        queueImplementationBy2Stacks.enqueue(50);
+        System.out.println(queueImplementationBy2Stacks);
+
+        PriorityQueue priorityQueue = new PriorityQueue(5); // Priority Queue
+        priorityQueue.add(5);
+        priorityQueue.add(3);
+        priorityQueue.add(6);
+        priorityQueue.add(1);
+        priorityQueue.add(4);
+        System.out.println(priorityQueue);
+
+        while (!priorityQueue.isEmpty()) {
+            System.out.println(priorityQueue.remove());
+        }*/
+
     }
 }
