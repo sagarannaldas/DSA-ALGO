@@ -1,5 +1,7 @@
 package com.sagar;
 
+import com.sagar.hashmap.HashMap;
+import com.sagar.hashmap.HashMapOperations;
 import com.sagar.queue.ArrayQueue;
 import com.sagar.queue.PriorityQueue;
 import com.sagar.queue.QueueImplementationBy2Stacks;
@@ -119,5 +121,22 @@ class Main {
             System.out.println(priorityQueue.remove());
         }*/
 
+        // Hash Map / Hash Tables
+
+        HashMapOperations hashMapOperations = new HashMapOperations();
+        char item = hashMapOperations.firstNonRepeatedCharacter("a green apple");
+        System.out.println(item);
+
+        char repeatedItem = hashMapOperations.firstRepeatedCharacter("a green apple");
+        System.out.println(repeatedItem);
+
+        HashMap hashMap = new HashMap();
+        hashMap.put(6, "A");  // 1
+        hashMap.put(8, "B");  // 3
+        hashMap.put(11, "C"); // 1
+        hashMap.put(6, "A+");
+
+        System.out.println(hashMap.get(2));
+        hashMap.remove(60);
     }
 }

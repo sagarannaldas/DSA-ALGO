@@ -1,4 +1,4 @@
-package com.sagar;
+package com.sagar.array;
 
 public class Array {
 
