@@ -1,4 +1,4 @@
-package com.sagar.hashmap;
+package com.sagar.linear_data_structures.hashmap;
 
 import java.util.HashMap;
 import java.util.HashSet;

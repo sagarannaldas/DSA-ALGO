@@ -1,4 +1,4 @@
-package com.sagar.queue;
+package com.sagar.linear_data_structures.queue;
 
 import java.util.Queue;
 import java.util.Stack;

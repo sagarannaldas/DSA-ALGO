@@ -1,4 +1,4 @@
-package com.sagar.linkedlist;
+package com.sagar.linear_data_structures.linkedlist;
 
 import java.util.NoSuchElementException;
 

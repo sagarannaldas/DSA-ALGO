@@ -1,4 +1,4 @@
-package com.sagar.stack;
+package com.sagar.linear_data_structures.stack;
 
 import java.util.Arrays;
 import java.util.NoSuchElementException;

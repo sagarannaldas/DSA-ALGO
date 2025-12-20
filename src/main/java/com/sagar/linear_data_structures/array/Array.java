@@ -1,4 +1,4 @@
-package com.sagar.array;
+package com.sagar.linear_data_structures.array;
 
 public class Array {
 
