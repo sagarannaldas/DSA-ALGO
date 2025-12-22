@@ -1,6 +1,7 @@
 package com.sagar;
 
 import com.sagar.non_linear_data_structures.binary_tree.Tree;
+import com.sagar.non_linear_data_structures.binary_tree.avl_tree.AVLTree;
 
 class Main {
     public static void main(String[] args) {
@@ -139,9 +140,9 @@ class Main {
 
         //---------------------------------- Non - Linear Data Structures -----------------------------------------
 
-        // Tree
+        //------------------------------------------------- Tree -----------------------------------------------------
 
-        Tree tree = new Tree();
+/*        Tree tree = new Tree();
         tree.insert(7);
         tree.insert(4);
         tree.insert(9);
@@ -176,6 +177,18 @@ class Main {
         System.out.println(tree.isBinarySearchTree());
         System.out.println(tree.getNodesAtDistance(2));
 
-        tree.traverseLevelOrder();
+        tree.traverseLevelOrder();*/
+
+        // -------------------------------------------- AVL Tree -----------------------------------------------------
+
+        AVLTree avlTree = new AVLTree();
+
+        avlTree.insert(30);
+        avlTree.insert(15);
+        avlTree.insert(18);
+        avlTree.insert(10);
+        avlTree.insert(16);
+        avlTree.insert(7);
+        avlTree.insert(8);
     }
 }
