@@ -1,9 +1,6 @@
 package com.sagar;
 
-import com.sagar.non_linear_data_structures.Tree;
-
-import java.util.Arrays;
-import java.util.Collections;
+import com.sagar.non_linear_data_structures.binary_tree.Tree;
 
 class Main {
     public static void main(String[] args) {

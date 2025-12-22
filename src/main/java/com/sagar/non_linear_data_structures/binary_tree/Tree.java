@@ -1,4 +1,4 @@
-package com.sagar.non_linear_data_structures;
+package com.sagar.non_linear_data_structures.binary_tree;
 
 import java.util.ArrayList;
 
