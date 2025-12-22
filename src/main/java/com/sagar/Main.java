@@ -1,13 +1,14 @@
 package com.sagar;
 
-import com.sagar.hashmap.HashMap;
-import com.sagar.hashmap.HashMapOperations;
-import com.sagar.queue.ArrayQueue;
-import com.sagar.queue.PriorityQueue;
-import com.sagar.queue.QueueImplementationBy2Stacks;
+import com.sagar.non_linear_data_structures.Tree;
+
+import java.util.Arrays;
+import java.util.Collections;
 
 class Main {
     public static void main(String[] args) {
+
+        //--------------------------------- Linear Data Structures ----------------------------------------------
 
         // Array
 
@@ -123,7 +124,7 @@ class Main {
 
         // Hash Map / Hash Tables
 
-        HashMapOperations hashMapOperations = new HashMapOperations();
+/*        HashMapOperations hashMapOperations = new HashMapOperations();
         char item = hashMapOperations.firstNonRepeatedCharacter("a green apple");
         System.out.println(item);
 
@@ -137,6 +138,47 @@ class Main {
         hashMap.put(6, "A+");
 
         System.out.println(hashMap.get(2));
-        hashMap.remove(60);
+        hashMap.remove(60);*/
+
+        //---------------------------------- Non - Linear Data Structures -----------------------------------------
+
+        // Tree
+
+        Tree tree = new Tree();
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(9);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(10);
+
+        System.out.println(tree.find(11));
+        System.out.println("Done");
+        tree.traversePreOrder();
+        tree.traverseInOrder();
+        tree.traversePostOrder();
+        System.out.println("Height is: " + tree.height());
+        System.out.println("Min value is: " + tree.min());
+        System.out.println("BST min value is: " + tree.minBST());
+
+
+        Tree tree1 = new Tree();
+
+        tree1.insert(4);
+        tree1.insert(7);
+        tree1.insert(9);
+        tree1.insert(1);
+        tree1.insert(6);
+        tree1.insert(8);
+        tree1.insert(10);
+
+        System.out.println(tree.equals(tree1));
+
+//        tree.swapRootChildren();
+        System.out.println(tree.isBinarySearchTree());
+        System.out.println(tree.getNodesAtDistance(2));
+
+        tree.traverseLevelOrder();
     }
 }
