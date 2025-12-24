@@ -10,6 +10,7 @@ public class PriorityQueue {
         priorityItems = new int[capacity];
     }
 
+    // O(n)
     public void add(int value) {
         if (isFull())
             throw new IllegalStateException();
@@ -32,6 +33,7 @@ public class PriorityQueue {
         return i + 1;
     }
 
+    // O(1)
     public int remove() {
         if (isEmpty())
             throw new IllegalStateException();

@@ -1,7 +1,11 @@
 package com.sagar;
 
-import com.sagar.non_linear_data_structures.binary_tree.Tree;
-import com.sagar.non_linear_data_structures.binary_tree.avl_tree.AVLTree;
+import com.sagar.linear_data_structures.queue.PriorityQueue;
+import com.sagar.non_linear_data_structures.binary_tree.heap_tree.HeapSort;
+import com.sagar.non_linear_data_structures.binary_tree.heap_tree.Heap;
+import com.sagar.non_linear_data_structures.binary_tree.heap_tree.MaxHeap;
+
+import java.util.Arrays;
 
 class Main {
     public static void main(String[] args) {
@@ -181,7 +185,7 @@ class Main {
 
         // -------------------------------------------- AVL Tree -----------------------------------------------------
 
-        AVLTree avlTree = new AVLTree();
+/*        AVLTree avlTree = new AVLTree();
 
         avlTree.insert(30);
         avlTree.insert(15);
@@ -189,6 +193,41 @@ class Main {
         avlTree.insert(10);
         avlTree.insert(16);
         avlTree.insert(7);
-        avlTree.insert(8);
+        avlTree.insert(8);*/
+
+        // ------------------------------------------------ Heap Tree ------------------------------------------------
+
+        Heap heap = new Heap(6);
+        heap.insert(10);
+        heap.insert(5);
+        heap.insert(17);
+        heap.insert(4);
+        heap.insert(22);
+        heap.remove();
+        System.out.println("Done");
+
+        // --------------------------------------------- HeapSort ---------------------------------------------------
+        var array = new int[]{5, 3, 10, 1, 4, 2};
+        HeapSort heapSort = new HeapSort();
+        System.out.println(Arrays.toString(heapSort.sortAscending(array)));
+
+        // Have doubt here, why first heapObject values are showing in second heapObject sortAscending method call.
+
+        // --------------------------------------------- Priority Queue --------------------------------------------
+
+        PriorityQueue priorityQueue = new PriorityQueue(10);
+        priorityQueue.add(30);
+        priorityQueue.add(20);
+        priorityQueue.add(10);
+        priorityQueue.add(5);
+        System.out.println(priorityQueue);
+
+        // --------------------------------------- Heapify ----------------------------------------------------
+
+        int[] numbers = {5, 3, 8, 4, 1, 2};
+        MaxHeap.heapify(numbers);
+        System.out.println(Arrays.toString(numbers));
+
+        System.out.println(MaxHeap.getKthLargest(numbers, 6));
     }
 }
