@@ -4,6 +4,7 @@ import com.sagar.linear_data_structures.queue.PriorityQueue;
 import com.sagar.non_linear_data_structures.binary_tree.heap_tree.HeapSort;
 import com.sagar.non_linear_data_structures.binary_tree.heap_tree.Heap;
 import com.sagar.non_linear_data_structures.binary_tree.heap_tree.MaxHeap;
+import com.sagar.non_linear_data_structures.binary_tree.trie_tree.Trie;
 
 import java.util.Arrays;
 
@@ -197,37 +198,63 @@ class Main {
 
         // ------------------------------------------------ Heap Tree ------------------------------------------------
 
-        Heap heap = new Heap(6);
-        heap.insert(10);
-        heap.insert(5);
-        heap.insert(17);
-        heap.insert(4);
-        heap.insert(22);
-        heap.remove();
+//        Heap heap = new Heap(6);
+//        heap.insert(10);
+//        heap.insert(5);
+//        heap.insert(17);
+//        heap.insert(4);
+//        heap.insert(22);
+//        heap.remove();
+//        System.out.println("Done");
+//
+//        // --------------------------------------------- HeapSort ---------------------------------------------------
+//        var array = new int[]{5, 3, 10, 1, 4, 2};
+//        HeapSort heapSort = new HeapSort();
+//        System.out.println(Arrays.toString(heapSort.sortAscending(array)));
+//
+//        // Have doubt here, why first heapObject values are showing in second heapObject sortAscending method call.
+//
+//        // --------------------------------------------- Priority Queue --------------------------------------------
+//
+//        PriorityQueue priorityQueue = new PriorityQueue(10);
+//        priorityQueue.add(30);
+//        priorityQueue.add(20);
+//        priorityQueue.add(10);
+//        priorityQueue.add(5);
+//        System.out.println(priorityQueue);
+//
+//        // --------------------------------------- Heapify ----------------------------------------------------
+//
+//        int[] numbers = {5, 3, 8, 4, 1, 2};
+//        MaxHeap.heapify(numbers);
+//        System.out.println(Arrays.toString(numbers));
+//
+//        System.out.println(MaxHeap.getKthLargest(numbers, 6));
+
+        // ------------------------------------------- Trie ------------------------------------------------------
+
+        Trie trie = new Trie();
+
+        trie.insert("can");
+        trie.insert("care");
+        System.out.println(trie.contains("can"));
+        trie.preOrderTraverse();
+        trie.postOrderTraverse();
+        trie.remove("can");
+        System.out.println(trie.contains("can"));
+        System.out.println(trie.contains("care"));
         System.out.println("Done");
 
-        // --------------------------------------------- HeapSort ---------------------------------------------------
-        var array = new int[]{5, 3, 10, 1, 4, 2};
-        HeapSort heapSort = new HeapSort();
-        System.out.println(Arrays.toString(heapSort.sortAscending(array)));
 
-        // Have doubt here, why first heapObject values are showing in second heapObject sortAscending method call.
+        Trie trie2 = new Trie();
+        trie2.insert("car");
+        trie2.insert("card");
+        trie2.insert("care");
+        trie2.insert("careful");
+        trie2.insert("egg");
+        var words = trie2.findWords(null);
+        System.out.println(words);
 
-        // --------------------------------------------- Priority Queue --------------------------------------------
 
-        PriorityQueue priorityQueue = new PriorityQueue(10);
-        priorityQueue.add(30);
-        priorityQueue.add(20);
-        priorityQueue.add(10);
-        priorityQueue.add(5);
-        System.out.println(priorityQueue);
-
-        // --------------------------------------- Heapify ----------------------------------------------------
-
-        int[] numbers = {5, 3, 8, 4, 1, 2};
-        MaxHeap.heapify(numbers);
-        System.out.println(Arrays.toString(numbers));
-
-        System.out.println(MaxHeap.getKthLargest(numbers, 6));
     }
 }
