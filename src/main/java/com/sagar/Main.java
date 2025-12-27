@@ -1,12 +1,6 @@
 package com.sagar;
 
-import com.sagar.linear_data_structures.queue.PriorityQueue;
-import com.sagar.non_linear_data_structures.binary_tree.heap_tree.HeapSort;
-import com.sagar.non_linear_data_structures.binary_tree.heap_tree.Heap;
-import com.sagar.non_linear_data_structures.binary_tree.heap_tree.MaxHeap;
-import com.sagar.non_linear_data_structures.binary_tree.trie_tree.Trie;
-
-import java.util.Arrays;
+import com.sagar.non_linear_data_structures.binary_tree.weighted_graph.WeightedGraph;
 
 class Main {
     public static void main(String[] args) {
@@ -233,7 +227,7 @@ class Main {
 
         // ------------------------------------------- Trie ------------------------------------------------------
 
-        Trie trie = new Trie();
+/*        Trie trie = new Trie();
 
         trie.insert("can");
         trie.insert("care");
@@ -253,8 +247,67 @@ class Main {
         trie2.insert("careful");
         trie2.insert("egg");
         var words = trie2.findWords(null);
-        System.out.println(words);
+        System.out.println(words);*/
+
+        // ------------------------------------------ Graph ----------------------------------------------
+
+//        Graph graph = new Graph();
+//        graph.addNode("A");
+//        graph.addNode("B");
+//        graph.addNode("C");
+//        graph.addEdge("A", "B");
+//        graph.addEdge("A", "C");
+//        graph.print();
+//        graph.removeEdge("A", "D");
+//        graph.print();
+//        graph.removeNode("B");
+//        graph.removeNode("A");
+//        graph.print();
 
 
+        // --------------------------------------- Weighted - Graphs ----------------------------------------
+
+        WeightedGraph graph = new WeightedGraph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addEdge("A", "B", 3);
+        graph.addEdge("A", "C", 2);
+        graph.print();
+
+        WeightedGraph graph2 = new WeightedGraph();
+        graph2.addNode("A");
+        graph2.addNode("B");
+        graph2.addNode("C");
+//        graph2.addEdge("A", "B", 1);
+//        graph2.addEdge("B", "C", 2);
+//        graph2.addEdge("A", "C", 10);
+
+        graph2.addEdge("A", "B", 0);
+        graph2.addEdge("B", "C", 0);
+        graph2.addEdge("C", "A", 0);
+        System.out.println(graph2.hasCycle());
+
+        //--------------------------------- Dijkstra's Algorithm -----------------------------------------------
+
+//        var path = graph2.getShortestPath("A", "C");
+//        System.out.println(path);
+
+        //---------------------------------- Prim's Algorithm ----------------------------------------------------
+
+        WeightedGraph graph3 = new WeightedGraph();
+        graph3.addNode("A");
+        graph3.addNode("B");
+        graph3.addNode("C");
+        graph3.addNode("D");
+        graph3.addEdge("A", "B", 3);
+        graph3.addEdge("B", "D", 4);
+        graph3.addEdge("C", "D", 5);
+        graph3.addEdge("A", "C", 1);
+        graph3.addEdge("B", "C", 2);
+
+        var tree = graph3.getMinimumSpanningTree();
+        tree.print();
     }
 }
